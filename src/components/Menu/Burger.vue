@@ -29,7 +29,11 @@ export default {
   }
 };
 </script>
-<style>
+<style sass="scss" scoped>
+
+
+
+
 .hidden {
   visibility: hidden;
 }
@@ -44,9 +48,13 @@ button:focus {
 }
 
 .burger-button {
-  position: relative;
+   outline: 0;
+  margin-top: 15px;
+  position: absolute;
   height: 30px;
-  width: 32px;
+  top:0px;
+  left: 0px;
+  width: 60px;
   display: block;
   z-index: 999;
   border: 0;
@@ -63,6 +71,7 @@ button:focus {
   right: 6px;
   left: 6px;
   height: 2px;
+  z-index: 999;
   width: auto;
   margin-top: -1px;
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
@@ -97,7 +106,7 @@ button:focus {
 }
 
 #burger.active .burger-bar {
-  background-color: #fff;
+  background-color: rgb(19, 17, 17);
 }
 
 #burger.active .burger-bar--1 {
